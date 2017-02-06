@@ -12,7 +12,7 @@ var randomWord = wordbank[Math.floor(Math.random() * wordbank.length)];
 
 document.body.onkeyup = function(e){
     if(e.keyCode == 32){
-    	console.log(randomWord)
+    	document.getElementById("dashed_word").innerHTML = (dashes);
     }
 }
 
@@ -26,35 +26,8 @@ for (i = 0; i < randomWord.length; i++) {
   }
 }
 
-document.getElementById("dashed_word").innerHTML = (dashes);
+console.log(randomWord);
 
-
-// Convert word chosen to blanks
-
-console.log(dashes);
-
-document.getElementById("dashed_word").innerHTML = (dashes);
-
-
-// function blanksFromAnswer(randomWord) {
-//   var result = "";
-//   for (var i = 0; i < randomWord.length; i++) {
-//     result += "_";
-//   }
-//   console.log(blanksFromAnswer);
-// }
-
-// function hiddenWord() {
-// 	for (i=0; i<randomWord.length; i++); {
-// 		console.log("_"*[i]);
-// 	}
-// }
-
-// hiddenWord(randomWord);
-
-// hiddenWord(randomWord) {
-// 	console.log();
-// }
 
 // Define Variables
 
@@ -63,6 +36,9 @@ document.getElementById("dashed_word").innerHTML = (dashes);
   var wins = 0;
   var previousGuesses = [];
 
-  // document.getElementById("random_word").innerHTML = (randomWord);
+//Display Number of guesses remaining
+
+document.getElementById("guesses_left").innerHTML = (guessesLeft)
+ 
 
   

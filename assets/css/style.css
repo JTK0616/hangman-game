@@ -22,3 +22,7 @@
 .gameplay {
 	text-align: center;
 }
+
+#guesses_remaining {
+	color: red;
+}

@@ -18,33 +18,43 @@
 	<img src="assets/images/Hangman.jpg" alt="Hangman" class="img-rounded">
 	</div> <!-- - Jumbotron -->
 
-	<!-- Begin Gameplay Code -->
+<!-- Begin Gameplay Code -->
 
 	<div class="col-md-12 gameplay">
 		<div class="row">
 			<h3>Let's play!  Press the Spacebar To Begin</h3>
-			<br>
-			
-			<br>
+				<br>
+
+<!-- Current Word Displayed -->
+
 			<h4>Current Word</h4>
-			<br>
-			<div id="random_word"></div>
-
-
+				<br>
+				<h4><div id="dashed_word"></div>
+				<br>
+				<br>
 			
 		</div> <!-- row -->
 
-		<div class="row">
-		<h4>Number of guesses Remaining</h4>
-		<br>
-		</div> <!-- Row -->
+<!-- Guesses Remaining -->
 
 		<div class="row">
-		<h4>Letters Guessed</h4>
-		<br>
+			<h4>Number of guesses Remaining</h4>
+			<h4><div id="guesses_remaining"></div></h4>
+		</div> <!-- Row -->
+
+
+<!-- Letters Guessed -->
+
+		<div class="row">
+			<h4>Letters Guessed</h4>
+			<br>
+			<h4><div id="letters_guessed"</div></h4>
+			<br>
 		</div> <!-- Row -->
 
 	</div> <!-- gameplay -->
+
+<!-- Scores Returned Below -->
 
 	<div class="row scores">
 		<div class="col-md-6 yourscore">

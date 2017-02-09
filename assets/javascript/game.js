@@ -1,3 +1,11 @@
+//Set the number of guesses reaming to 10
+
+var guessesRemaining=10;
+
+//Display the number of guesses remaining
+
+document.getElementById('guesses_left').innerHTML = guessesRemaining;
+
 
 // Define the wordbank to be used in the hangman game
 
@@ -9,6 +17,12 @@ var randomWord = wordbank[Math.floor(Math.random() * wordbank.length)];
 var dashArray = [];
 
 console.log(randomWord);
+
+//Reduce number of guesses for each letter typed
+
+function reduceGuesses() {
+   guessesRemaining--;    
+}
 
 //Take random word and create dashed word
 
@@ -30,58 +44,15 @@ document.onkeyup = function(event) {
 	document.getElementById('dashed_word').innerHTML = dashArray.join(" ");
 }
 
-// Record previous guesses
 
-// var previousGuesses = [];
-// guess.push(previousGuesses);
-// document.getElementById('guesses_made').innerHTML=
+// Record previous guesses - Not Working
 
-// // document.onkeyup = function (event) {
-// //   var keyPress;
+// var lettersGuessed = [];
 
-// //   if (typeof event !== 'undefined') {
-// //     keyPress = event.keyCode;
-// //   }
-// //   else if (event) {
-// //     keyPress = e.which;
-// //   }
+// document.onkeyup=function(){
+//     document.getElementById('guesses_made').innerHTML = push.guess(lettersGuessed);
+//     }
 
-// var previousGuesses.push(event.key);
-
-// //   return false;
-// // };
-
-// document.getElementById('previousGuesses').innerHTML=(previousGuesses);
-
-
-// // Define Variables
-
-//   var guessesLeft = 10;
-//   var losses = 0;
-//   var wins = 0;
-  
-
-
-// //Display Number of guesses remaining
-
-// document.getElementById('guesses_left').innerHTML = (guessesLeft)
-
-// //Display Previous Guesses
-
-
-
-// //Check letter entered against letter in dashed word
-
-// // document.onkeyup = function(dashes) {
-// // 	var guess = event.key;
-
-// // 	for (i=0; i<dashes.length; i++) {
-// // 		if (guess == randomWord.charAt(i)){
-// // 			str.replace(/dashes.charAt(i)/g, document.body.onkeyup);
-// // 		} else
-// // 		{guessesLeft - 1};
-// // 	}
-// // }
 
 
  
